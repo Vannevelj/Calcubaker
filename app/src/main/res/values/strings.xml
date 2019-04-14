@@ -3,4 +3,14 @@
     <string name="convert">Convert</string>
     <string name="of">of</string>
     <string name="findButton">Find Results</string>
+
+    <string-array name="metrics">
+        <item>Grams (g)</item>
+        <item>Cups (Metric)</item>
+    </string-array>
+
+    <string-array name="products">
+        <item>Water</item>
+        <item>Olive Oil</item>
+    </string-array>
 </resources>
