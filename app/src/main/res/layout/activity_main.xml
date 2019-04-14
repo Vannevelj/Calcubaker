@@ -62,7 +62,7 @@
             android:elevation="3dp" android:entries="@array/products"/>
     <Button
             android:layout_width="245dp"
-            android:layout_height="wrap_content"
+            android:layout_height="36dp"
             android:id="@+id/calculateButton"
             app:layout_constraintTop_toBottomOf="@+id/product" android:background="@drawable/btn_rounded"
             android:textColor="#fff"
@@ -102,10 +102,10 @@
             app:layout_constraintTop_toBottomOf="@+id/toolbar" android:layout_marginTop="8dp"/>
     <ScrollView
             android:layout_width="0dp"
-            android:layout_height="402dp"
+            android:layout_height="0dp"
             app:layout_constraintTop_toBottomOf="@+id/divider" android:layout_marginTop="5dp"
             app:layout_constraintStart_toStartOf="@id/leftGuideline"
-            app:layout_constraintEnd_toStartOf="@id/rightGuideline">
+            app:layout_constraintEnd_toStartOf="@id/rightGuideline" app:layout_constraintBottom_toBottomOf="parent">
         <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:id="@+id/resultsTable">
@@ -116,7 +116,8 @@
                         android:text="0.94"
                         android:layout_width="22dp"
                         android:layout_height="wrap_content" android:id="@+id/textView3" android:layout_weight="2"
-                        android:textStyle="bold" android:paddingLeft="5dp" android:textColor="#000"/>
+                        android:textStyle="bold" android:paddingLeft="5dp" android:textColor="#000"
+                        android:textSize="18sp"/>
                 <TextView
                         android:text="Cups (Metric)"
                         android:layout_width="wrap_content"
@@ -129,7 +130,8 @@
                         android:text="0.98"
                         android:layout_width="22dp"
                         android:layout_height="wrap_content" android:id="@+id/textView5" android:layout_weight="2"
-                        android:textStyle="bold" android:paddingLeft="5dp" android:textColor="#000"/>
+                        android:textStyle="bold" android:paddingLeft="5dp" android:textColor="#000"
+                        android:textSize="18sp"/>
                 <TextView
                         android:text="Cups (US nutritional)"
                         android:layout_width="wrap_content"
@@ -142,7 +144,8 @@
                         android:text="1.00"
                         android:layout_width="22dp"
                         android:layout_height="wrap_content" android:id="@+id/textView7" android:layout_weight="2"
-                        android:textStyle="bold" android:paddingLeft="5dp" android:textColor="#000"/>
+                        android:textStyle="bold" android:paddingLeft="5dp" android:textColor="#000"
+                        android:textSize="18sp"/>
                 <TextView
                         android:text="Cups (US recipes)"
                         android:layout_width="wrap_content"
@@ -155,7 +158,8 @@
                         android:text="8.00"
                         android:layout_width="22dp"
                         android:layout_height="wrap_content" android:id="@+id/textView9" android:layout_weight="2"
-                        android:textStyle="bold" android:paddingLeft="5dp" android:textColor="#000"/>
+                        android:textStyle="bold" android:paddingLeft="5dp" android:textColor="#000"
+                        android:textSize="18sp"/>
                 <TextView
                         android:text="Fluid ounces (fl. oz)"
                         android:layout_width="wrap_content"
@@ -169,7 +173,8 @@
                         android:text="236.59"
                         android:layout_width="22dp"
                         android:layout_height="wrap_content" android:id="@+id/textView11" android:layout_weight="2"
-                        android:textStyle="bold" android:paddingLeft="5dp" android:textColor="#000"/>
+                        android:textStyle="bold" android:paddingLeft="5dp" android:textColor="#000"
+                        android:textSize="18sp"/>
                 <TextView
                         android:text="Grams (g)"
                         android:layout_width="wrap_content"
@@ -183,7 +188,8 @@
                         android:text="0.23"
                         android:layout_width="22dp"
                         android:layout_height="wrap_content" android:id="@+id/textView13" android:layout_weight="2"
-                        android:textStyle="bold" android:paddingLeft="5dp" android:textColor="#000"/>
+                        android:textStyle="bold" android:paddingLeft="5dp" android:textColor="#000"
+                        android:textSize="18sp"/>
                 <TextView
                         android:text="Kilogram (kg)"
                         android:layout_width="wrap_content"
@@ -197,7 +203,8 @@
                         android:text="0.23"
                         android:layout_width="22dp"
                         android:layout_height="wrap_content" android:id="@+id/textView15" android:layout_weight="2"
-                        android:textStyle="bold" android:paddingLeft="5dp" android:textColor="#000"/>
+                        android:textStyle="bold" android:paddingLeft="5dp" android:textColor="#000"
+                        android:textSize="18sp"/>
                 <TextView
                         android:text="Liter (l)"
                         android:layout_width="wrap_content"
@@ -211,7 +218,8 @@
                         android:text="236.59"
                         android:layout_width="22dp"
                         android:layout_height="wrap_content" android:id="@+id/textView17" android:layout_weight="2"
-                        android:textStyle="bold" android:paddingLeft="5dp" android:textColor="#000"/>
+                        android:textStyle="bold" android:paddingLeft="5dp" android:textColor="#000"
+                        android:textSize="18sp"/>
                 <TextView
                         android:text="Milliliter (ml)"
                         android:layout_width="wrap_content"
@@ -225,7 +233,8 @@
                         android:text="8.34"
                         android:layout_width="22dp"
                         android:layout_height="wrap_content" android:id="@+id/textView19" android:layout_weight="2"
-                        android:textStyle="bold" android:paddingLeft="5dp" android:textColor="#000"/>
+                        android:textStyle="bold" android:paddingLeft="5dp" android:textColor="#000"
+                        android:textSize="18sp"/>
                 <TextView
                         android:text="Ounces (oz)"
                         android:layout_width="wrap_content"
@@ -239,7 +248,8 @@
                         android:text="0.52"
                         android:layout_width="22dp"
                         android:layout_height="wrap_content" android:id="@+id/textView21" android:layout_weight="2"
-                        android:textStyle="bold" android:paddingLeft="5dp" android:textColor="#000"/>
+                        android:textStyle="bold" android:paddingLeft="5dp" android:textColor="#000"
+                        android:textSize="18sp"/>
                 <TextView
                         android:text="Pounds (lbs)"
                         android:layout_width="wrap_content"
@@ -253,7 +263,8 @@
                         android:text="15.77"
                         android:layout_width="22dp"
                         android:layout_height="wrap_content" android:id="@+id/textView23" android:layout_weight="2"
-                        android:textStyle="bold" android:paddingLeft="5dp" android:textColor="#000"/>
+                        android:textStyle="bold" android:paddingLeft="5dp" android:textColor="#000"
+                        android:textSize="18sp"/>
                 <TextView
                         android:text="Tablespoons (Metric)"
                         android:layout_width="wrap_content"
@@ -267,7 +278,8 @@
                         android:text="16.00"
                         android:layout_width="22dp"
                         android:layout_height="wrap_content" android:id="@+id/textView25" android:layout_weight="2"
-                        android:textStyle="bold" android:paddingLeft="5dp" android:textColor="#000"/>
+                        android:textStyle="bold" android:paddingLeft="5dp" android:textColor="#000"
+                        android:textSize="18sp"/>
                 <TextView
                         android:text="Tablespoons (US)"
                         android:layout_width="wrap_content"
@@ -281,7 +293,8 @@
                         android:text="50.00"
                         android:layout_width="22dp"
                         android:layout_height="wrap_content" android:id="@+id/textView27" android:layout_weight="2"
-                        android:textStyle="bold" android:paddingLeft="5dp" android:textColor="#000"/>
+                        android:textStyle="bold" android:paddingLeft="5dp" android:textColor="#000"
+                        android:textSize="18sp"/>
                 <TextView
                         android:text="Teaspoons (Metric)"
                         android:layout_width="wrap_content"
@@ -295,7 +308,8 @@
                         android:text="50.72"
                         android:layout_width="22dp"
                         android:layout_height="wrap_content" android:id="@+id/textView29" android:layout_weight="2"
-                        android:textStyle="bold" android:paddingLeft="5dp" android:textColor="#000"/>
+                        android:textStyle="bold" android:paddingLeft="5dp" android:textColor="#000"
+                        android:textSize="18sp"/>
                 <TextView
                         android:text="Teaspoons (US)"
                         android:layout_width="wrap_content"
