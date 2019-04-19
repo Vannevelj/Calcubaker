@@ -36,8 +36,8 @@ class MetricsService(
 
         val graph = Graph(edges)
         val dijkstra = DijkstraAlgorithm(graph)
-        val sourceVertex = dijkstra.execute(Vertex(source.id))
-        val path = sourceVertex.getPath(Vertex(destination.id))
+        val sourceVertex = dijkstra.execute(Vertex(source.id.id))
+        val path = sourceVertex.getPath(Vertex(destination.id.id))
 
         val chainedConversions = arrayListOf<Conversion>()
         var index = 1;
@@ -48,12 +48,12 @@ class MetricsService(
         {
             end = parseInt((path[index].payload.toString()))
 
-            var conversion = conversions.first { conv -> conv.to.id == start && conv.from.id == end }
+            var conversion = conversions.first { conv -> conv.from.id == start && conv.to.id == end }
             chainedConversions.add(conversion)
 
             index++;
             start = end;
-        } while (conversions.last().to.id != destination.id.id)
+        } while (chainedConversions.last().to.id != destination.id.id)
 
         return ComposedConversion(source.id, destination.id, chainedConversions)
     }
