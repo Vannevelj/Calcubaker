@@ -1,6 +1,6 @@
 package com.example.calcubaker.models
 
-open class Conversion(private val from: MetricUnit, private val to: MetricUnit, private val calculation: ((amount: Double, product: Product) -> Double)?) {
+open class Conversion(public val from: MetricUnit, public val to: MetricUnit, private val calculation: ((amount: Double, product: Product) -> Double)?) {
     open fun calculate(amount: Double, product: Product): Double = calculation?.invoke(amount, product) ?: 0.0
 
     override fun equals(other: Any?): Boolean {
