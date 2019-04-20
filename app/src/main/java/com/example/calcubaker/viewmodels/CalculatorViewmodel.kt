@@ -25,7 +25,7 @@ class CalculatorViewmodel(private val metricsService: MetricsService) {
             val result = metricsService.calculate(amount!!, product!!, sourceMetric!!, destinationMetric);
             if (result != null)
             {
-                results.add(CalculationResult(amount!!, destinationMetric))
+                results.add(CalculationResult(result!!, destinationMetric))
             }
         }
     }
