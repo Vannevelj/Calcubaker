@@ -97,7 +97,11 @@ class MainActivity : AppCompatActivity(), OnItemSelectedListener, TextWatcher, V
     }
 
     override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-        viewmodel.amount = parseDouble(p0.toString())
+        if (p0 == null || p0.isEmpty()) {
+            viewmodel.amount = 0.0
+        } else {
+            viewmodel.amount = parseDouble(p0.toString())
+        }
     }
 
     override fun onClick(v: View?) {
