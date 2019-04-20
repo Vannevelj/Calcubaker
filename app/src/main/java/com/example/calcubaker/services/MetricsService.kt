@@ -16,7 +16,7 @@ class MetricsService(
     private val productRepository: ProductRepository) {
 
     fun getMetrics() : List<Metric> = metricsRepository.getMetrics().sortedBy { metric -> metric.name }
-    fun getProducts() : List<Product> = productRepository.getProducts().sortedByDescending { product -> product.isGeneric }.sortedBy { product -> product.name }
+    fun getProducts() : List<Product> = productRepository.getProducts().sortedBy { product -> product.name }
     fun getMetric(metricUnit: MetricUnit) : Metric = metricsRepository.getMetrics().first { metric -> metric.id == metricUnit}
 
     private fun getConversion(source: Metric, destination: Metric) : Conversion {

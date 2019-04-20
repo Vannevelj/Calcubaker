@@ -11,7 +11,7 @@ class CalculatorViewmodel(private val metricsService: MetricsService) {
     val results: ArrayList<CalculationResult> = arrayListOf()
 
     fun getMetrics() : List<Metric> = metricsService.getMetrics()
-    fun getProducts() : List<Product> = metricsService.getProducts()
+    fun getProducts() : List<Product> = listOf(Product.Generic).plus(metricsService.getProducts().toList())
 
     fun calculate() {
         if (product == null || amount == null || sourceMetric == null) {
