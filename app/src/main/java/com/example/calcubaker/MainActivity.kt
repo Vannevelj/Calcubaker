@@ -21,7 +21,8 @@ import java.lang.Double.parseDouble
 import com.crashlytics.android.Crashlytics
 import com.crashlytics.android.answers.Answers
 import io.fabric.sdk.android.Fabric
-
+import android.app.Activity
+import android.view.inputmethod.InputMethodManager
 
 
 class MainActivity : AppCompatActivity(), OnItemSelectedListener, TextWatcher, View.OnClickListener {
@@ -134,6 +135,7 @@ class MainActivity : AppCompatActivity(), OnItemSelectedListener, TextWatcher, V
                 valueText.text = result.displayAmount
             }
         }
+        hideKeyboard(this)
         table.visibility = View.VISIBLE
     }
 
@@ -162,5 +164,21 @@ class MainActivity : AppCompatActivity(), OnItemSelectedListener, TextWatcher, V
         row.addView(labelText)
 
         return row
+    }
+
+    // https://stackoverflow.com/a/17789187/1864167
+    fun hideKeyboard(activity: Activity) {
+        val imm = activity.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+
+        //Find the currently focused view, so we can grab the correct window token from it.
+        var view = activity.currentFocus
+
+        //If no view currently has focus, create a new one, just so we can grab a window token from it
+        if (view == null) {
+            view = View(activity)
+        }
+
+        view.clearFocus()
+        imm.hideSoftInputFromWindow(view.windowToken, 0)
     }
 }
