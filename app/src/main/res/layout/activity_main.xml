@@ -25,7 +25,7 @@
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintGuide_begin="131dp"
+            app:layout_constraintGuide_begin="114dp"
             android:id="@+id/secondRowGuideline"/>
 
     <android.support.constraint.Guideline
@@ -48,8 +48,8 @@
 
     <TextView
             android:text="@string/convert"
-            android:layout_width="82dp"
-            android:layout_height="46dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:id="@+id/convertLabel"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -57,22 +57,25 @@
             android:gravity="center_vertical"
             app:layout_constraintStart_toStartOf="@id/leftGuideline"
             app:layout_constraintTop_toBottomOf="@id/topGuideline"
-            app:layout_constraintBottom_toTopOf="@id/secondRowGuideline"/>
+            app:layout_constraintBottom_toTopOf="@id/secondRowGuideline"
+            app:layout_constraintEnd_toStartOf="@id/labelGuideline"/>
 
     <TextView
             android:text="@string/of"
-            android:layout_width="61dp"
-            android:layout_height="37dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:id="@+id/ofLabel"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="#A87B51"
             android:gravity="center_vertical"
             app:layout_constraintStart_toStartOf="@+id/leftGuideline"
-            app:layout_constraintTop_toBottomOf="@+id/secondRowGuideline"/>
+            app:layout_constraintTop_toBottomOf="@+id/secondRowGuideline"
+            app:layout_constraintEnd_toStartOf="@id/labelGuideline"
+            app:layout_constraintBottom_toTopOf="@id/buttonAreaGuideline"/>
 
     <Spinner
-            android:layout_width="251dp"
+            android:layout_width="0dp"
             android:layout_height="38dp"
             android:id="@+id/product"
             app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
@@ -80,13 +83,13 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintTop_toBottomOf="@+id/secondRowGuideline"
             android:elevation="3dp"
-            android:entries="@array/products"/>
+            android:entries="@array/products" app:layout_constraintBottom_toTopOf="@id/buttonAreaGuideline"/>
 
     <Button
             android:layout_width="0dp"
             android:layout_height="36dp"
             android:id="@+id/calculateButton"
-            app:layout_constraintTop_toBottomOf="@+id/product"
+            app:layout_constraintTop_toBottomOf="@id/buttonAreaGuideline"
             android:background="@drawable/btn_rounded"
             android:textColor="#fff"
             android:textAllCaps="false"
@@ -105,7 +108,7 @@
             app:layout_constraintStart_toEndOf="@+id/quantity"
             app:layout_constraintEnd_toStartOf="@id/rightGuideline"
             app:layout_constraintBottom_toTopOf="@id/secondRowGuideline" app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_weight="3"/>
+            app:layout_constraintHorizontal_weight="3"/>
 
     <View
             android:id="@+id/divider"
@@ -120,7 +123,7 @@
 
     <EditText
             android:layout_width="0dp"
-            android:layout_height="47dp"
+            android:layout_height="0dp"
             android:inputType="numberSigned"
             android:ems="10"
             android:id="@+id/quantity"
@@ -131,7 +134,7 @@
             app:layout_constraintStart_toStartOf="@+id/labelGuideline"
             app:layout_constraintTop_toBottomOf="@id/topGuideline"
             app:layout_constraintBottom_toTopOf="@id/secondRowGuideline"
-            app:layout_constraintStart_toEndOf="@+id/convertLabel" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintEnd_toStartOf="@+id/sourceMetric" app:layout_constraintHorizontal_weight="1"/>
 
     <ScrollView
@@ -373,4 +376,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" app:layout_constraintGuide_begin="50dp"
             android:id="@+id/topGuideline"/>
+    <android.support.constraint.Guideline
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:layout_constraintGuide_begin="163dp" android:id="@+id/buttonAreaGuideline"/>
 </android.support.constraint.ConstraintLayout>
