@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity(), OnItemSelectedListener, TextWatcher, V
         val supportActionBar = supportActionBar
         if (supportActionBar != null) {
             supportActionBar.title = "Calcubaker"
-            supportActionBar.setLogo(R.mipmap.calcubaker_logo)
+            supportActionBar.setLogo(R.mipmap.ic_launcher)
             supportActionBar.setDisplayShowTitleEnabled(true)
             supportActionBar.setDisplayUseLogoEnabled(true)
             supportActionBar.setDisplayShowHomeEnabled(true)
