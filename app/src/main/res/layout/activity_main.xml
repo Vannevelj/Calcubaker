@@ -12,21 +12,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintGuide_begin="32dp"
-            android:id="@+id/leftGuideline" />
+            android:id="@+id/leftGuideline"/>
 
     <android.support.constraint.Guideline
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintGuide_begin="372dp"
-            android:id="@+id/rightGuideline" />
+            android:id="@+id/rightGuideline"/>
 
     <android.support.constraint.Guideline
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintGuide_begin="131dp"
-            android:id="@+id/secondRowGuideline" />
+            android:id="@+id/secondRowGuideline"/>
 
     <android.support.constraint.Guideline
             android:orientation="vertical"
@@ -44,7 +44,7 @@
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"/>
 
     <TextView
             android:text="@string/convert"
@@ -69,7 +69,7 @@
             android:textColor="#A87B51"
             android:gravity="center_vertical"
             app:layout_constraintStart_toStartOf="@+id/leftGuideline"
-            app:layout_constraintTop_toBottomOf="@+id/secondRowGuideline" />
+            app:layout_constraintTop_toBottomOf="@+id/secondRowGuideline"/>
 
     <Spinner
             android:layout_width="251dp"
@@ -80,7 +80,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintTop_toBottomOf="@+id/secondRowGuideline"
             android:elevation="3dp"
-            android:entries="@array/products" />
+            android:entries="@array/products"/>
 
     <Button
             android:layout_width="0dp"
@@ -96,7 +96,7 @@
             android:elevation="3dp" app:layout_constraintBottom_toTopOf="@id/bottomFormGuideline"/>
 
     <Spinner
-            android:layout_width="202dp"
+            android:layout_width="0dp"
             android:layout_height="47dp"
             android:id="@+id/sourceMetric"
             android:elevation="3dp"
@@ -104,7 +104,8 @@
             app:layout_constraintTop_toBottomOf="@id/topGuideline"
             app:layout_constraintStart_toEndOf="@+id/quantity"
             app:layout_constraintEnd_toStartOf="@id/rightGuideline"
-            app:layout_constraintBottom_toTopOf="@id/secondRowGuideline"/>
+            app:layout_constraintBottom_toTopOf="@id/secondRowGuideline" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_weight="3"/>
 
     <View
             android:id="@+id/divider"
@@ -118,7 +119,7 @@
             android:elevation="0dp"/>
 
     <EditText
-            android:layout_width="91dp"
+            android:layout_width="0dp"
             android:layout_height="47dp"
             android:inputType="numberSigned"
             android:ems="10"
@@ -129,7 +130,9 @@
             android:background="@drawable/input_bordered"
             app:layout_constraintStart_toStartOf="@+id/labelGuideline"
             app:layout_constraintTop_toBottomOf="@id/topGuideline"
-            app:layout_constraintBottom_toTopOf="@id/secondRowGuideline"/>
+            app:layout_constraintBottom_toTopOf="@id/secondRowGuideline"
+            app:layout_constraintStart_toEndOf="@+id/convertLabel" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/sourceMetric" app:layout_constraintHorizontal_weight="1"/>
 
     <ScrollView
             android:layout_width="0dp"
@@ -363,7 +366,8 @@
     <android.support.constraint.Guideline
             android:orientation="horizontal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" app:layout_constraintGuide_begin="220dp" android:id="@+id/bottomFormGuideline"/>
+            android:layout_height="wrap_content" app:layout_constraintGuide_begin="220dp"
+            android:id="@+id/bottomFormGuideline"/>
     <android.support.constraint.Guideline
             android:orientation="horizontal"
             android:layout_width="wrap_content"
