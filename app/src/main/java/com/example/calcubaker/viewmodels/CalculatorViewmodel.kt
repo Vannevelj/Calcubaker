@@ -31,10 +31,7 @@ class CalculatorViewmodel(private val metricsService: MetricsService) {
         for(destinationMetric in destinationMetrics)
         {
             val result = metricsService.calculate(amount!!, product!!, sourceMetric!!, destinationMetric);
-            if (result != null)
-            {
-                results.add(CalculationResult(result!!, destinationMetric))
-            }
+            results.add(CalculationResult(result, destinationMetric))
         }
     }
 }

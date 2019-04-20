@@ -23,6 +23,7 @@ import com.crashlytics.android.answers.Answers
 import io.fabric.sdk.android.Fabric
 import android.app.Activity
 import android.view.inputmethod.InputMethodManager
+import com.calcubaker.calcubaker.R
 
 
 class MainActivity : AppCompatActivity(), OnItemSelectedListener, TextWatcher, View.OnClickListener {

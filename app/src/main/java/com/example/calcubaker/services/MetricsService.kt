@@ -40,9 +40,9 @@ class MetricsService(
         val path = sourceVertex.getPath(Vertex(destination.id.id))
 
         val chainedConversions = arrayListOf<Conversion>()
-        var index = 1;
+        var index = 1
         var start = parseInt((path[0].payload.toString()))
-        var end = 0;
+        var end: Int
 
         do
         {
