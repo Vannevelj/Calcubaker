@@ -1,9 +1,12 @@
 package com.example.calcubaker
 
+import android.graphics.Color
+import android.graphics.Typeface
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.TypedValue
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
@@ -107,7 +110,7 @@ class MainActivity : AppCompatActivity(), OnItemSelectedListener, TextWatcher {
             } else {
                 val viewGroup = row as ViewGroup
                 val valueText = viewGroup.getChildAt(0) as TextView
-                valueText.text = result.amount.toString()
+                valueText.text = result.displayAmount
             }
         }
     }
@@ -115,10 +118,23 @@ class MainActivity : AppCompatActivity(), OnItemSelectedListener, TextWatcher {
     private fun createRow(calculationResult: CalculationResult) : TableRow {
         val row = TableRow(this)
         row.tag = calculationResult.metric.id.id
+        val rowLayout = TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.MATCH_PARENT)
+        rowLayout.topMargin = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,5f, this.resources.displayMetrics).toInt()
+        row.layoutParams = rowLayout
+
         val valueText = TextView(this)
-        valueText.text = calculationResult.amount.toString()
+        valueText.text = calculationResult.displayAmount
+        valueText.setTypeface(valueText.typeface, Typeface.BOLD)
+        valueText.setTextColor(Color.BLACK)
+        valueText.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18f);
+        valueText.layoutParams = TableRow.LayoutParams(22, TableRow.LayoutParams.WRAP_CONTENT, 2f)
+        val paddingPx = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,5f, this.resources.displayMetrics).toInt()
+        valueText.setPadding(paddingPx, 0, 0, 0)
+
         val labelText = TextView(this)
         labelText.text = calculationResult.metric.name
+        labelText.layoutParams = TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT, 3f)
+        valueText.setTextColor(Color.BLACK)
 
         row.addView(valueText)
         row.addView(labelText)
