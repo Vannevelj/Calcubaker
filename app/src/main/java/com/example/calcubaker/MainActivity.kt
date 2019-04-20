@@ -19,7 +19,7 @@ import com.example.calcubaker.viewmodels.CalculationResult
 import com.example.calcubaker.viewmodels.CalculatorViewmodel
 import java.lang.Double.parseDouble
 
-class MainActivity : AppCompatActivity(), OnItemSelectedListener, TextWatcher {
+class MainActivity : AppCompatActivity(), OnItemSelectedListener, TextWatcher, View.OnClickListener {
     private val viewmodel: CalculatorViewmodel = CalculatorViewmodel(
         MetricsService(
             MetricsRepository() ,
@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity(), OnItemSelectedListener, TextWatcher {
 
     private lateinit var sourceMetrics: Spinner
     private lateinit var products: Spinner
+    private lateinit var table: TableLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,10 +38,12 @@ class MainActivity : AppCompatActivity(), OnItemSelectedListener, TextWatcher {
         setSupportActionBar(findViewById(R.id.toolbar))
         sourceMetrics = findViewById(R.id.sourceMetric)
         products = findViewById(R.id.product)
+        table = findViewById(R.id.resultsTable)
 
         sourceMetrics.onItemSelectedListener = this
         products.onItemSelectedListener = this
         findViewById<EditText>(R.id.quantity).addTextChangedListener(this)
+        findViewById<Button>(R.id.calculateButton).setOnClickListener(this)
 
         loadMetrics()
         loadProducts()
@@ -71,6 +74,8 @@ class MainActivity : AppCompatActivity(), OnItemSelectedListener, TextWatcher {
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+        reset()
+
         if (parent == sourceMetrics) {
             val metric = viewmodel.getMetrics().first { metric -> metric.name == sourceMetrics.getItemAtPosition(position)}
             viewmodel.sourceMetric = metric
@@ -78,8 +83,6 @@ class MainActivity : AppCompatActivity(), OnItemSelectedListener, TextWatcher {
             val product = viewmodel.getProducts().first { product -> product.name == products.getItemAtPosition(position)}
             viewmodel.product = product
         }
-
-        recalculate()
     }
 
     override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -90,17 +93,23 @@ class MainActivity : AppCompatActivity(), OnItemSelectedListener, TextWatcher {
     }
 
     override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+        reset()
     }
 
     override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
         viewmodel.amount = parseDouble(p0.toString())
+    }
+
+    override fun onClick(v: View?) {
         recalculate()
+    }
+
+    private fun reset() {
+        table.visibility = View.GONE
     }
 
     private fun recalculate() {
         viewmodel.calculate()
-
-        val table = findViewById<TableLayout>(R.id.resultsTable)
 
         viewmodel.results.forEach { result ->
             var row = table.findViewWithTag<TableRow>(result.metric.id.id)
@@ -113,6 +122,7 @@ class MainActivity : AppCompatActivity(), OnItemSelectedListener, TextWatcher {
                 valueText.text = result.displayAmount
             }
         }
+        table.visibility = View.VISIBLE
     }
 
     private fun createRow(calculationResult: CalculationResult) : TableRow {
