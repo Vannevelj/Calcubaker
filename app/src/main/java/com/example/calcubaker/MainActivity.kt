@@ -18,6 +18,11 @@ import com.example.calcubaker.services.MetricsService
 import com.example.calcubaker.viewmodels.CalculationResult
 import com.example.calcubaker.viewmodels.CalculatorViewmodel
 import java.lang.Double.parseDouble
+import com.crashlytics.android.Crashlytics
+import com.crashlytics.android.answers.Answers
+import io.fabric.sdk.android.Fabric
+
+
 
 class MainActivity : AppCompatActivity(), OnItemSelectedListener, TextWatcher, View.OnClickListener {
     private val viewmodel: CalculatorViewmodel = CalculatorViewmodel(
@@ -34,6 +39,8 @@ class MainActivity : AppCompatActivity(), OnItemSelectedListener, TextWatcher, V
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Fabric.with(this, Crashlytics())
+        Fabric.with(this, Answers())
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
         sourceMetrics = findViewById(R.id.sourceMetric)

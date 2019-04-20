@@ -1,5 +1,8 @@
 package com.example.calcubaker.services
 
+import com.crashlytics.android.Crashlytics
+import com.crashlytics.android.answers.Answers
+import com.crashlytics.android.answers.CustomEvent
 import com.example.calcubaker.models.*
 import com.example.calcubaker.repositories.ConversionRepository
 import com.example.calcubaker.repositories.MetricsRepository
@@ -62,6 +65,14 @@ class MetricsService(
         if (source.id == destination.id) { return amount }
 
         val conversion = getConversion(source, destination)
+
+        Answers.getInstance().logCustom(
+            CustomEvent("MetricConversion")
+            .putCustomAttribute("From", conversion.from.toString())
+            .putCustomAttribute("To", conversion.to.toString())
+            .putCustomAttribute("Product", product.name)
+            .putCustomAttribute("Amount", amount.toString()))
+
         return conversion.calculate(amount, product)
     }
 }
