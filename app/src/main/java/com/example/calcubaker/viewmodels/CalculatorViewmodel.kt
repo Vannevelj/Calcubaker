@@ -18,7 +18,7 @@ class CalculatorViewmodel(private val metricsService: MetricsService) {
             return
         }
 
-        val destinationMetrics = metricsService.getMetrics().filter { metric -> metric.id != sourceMetric?.id }
+        val destinationMetrics = metricsService.getMetrics()
 
         for(destinationMetric in destinationMetrics)
         {
