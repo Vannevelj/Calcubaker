@@ -8,24 +8,31 @@
         tools:context=".MainActivity">
 
     <android.support.constraint.Guideline
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.1"
+            android:id="@+id/topGuideline"/>
+
+    <android.support.constraint.Guideline
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintGuide_begin="32dp"
+            app:layout_constraintGuide_percent="0.05"
             android:id="@+id/leftGuideline"/>
 
     <android.support.constraint.Guideline
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintGuide_begin="372dp"
+            app:layout_constraintGuide_percent="0.95"
             android:id="@+id/rightGuideline"/>
 
     <android.support.constraint.Guideline
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintGuide_begin="114dp"
+            app:layout_constraintGuide_percent="0.15"
             android:id="@+id/secondRowGuideline"/>
 
     <android.support.constraint.Guideline
@@ -33,7 +40,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/labelGuideline"
-            app:layout_constraintGuide_end="305dp"/>
+            app:layout_constraintGuide_percent="0.3"/>
+
+    <android.support.constraint.Guideline
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.2"
+            android:id="@+id/buttonAreaGuideline"/>
+
+    <android.support.constraint.Guideline
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.3"
+            android:id="@+id/bottomFormGuideline"/>
+
 
     <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -366,18 +388,4 @@
             </TableRow>
         </TableLayout>
     </ScrollView>
-    <android.support.constraint.Guideline
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" app:layout_constraintGuide_begin="220dp"
-            android:id="@+id/bottomFormGuideline"/>
-    <android.support.constraint.Guideline
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" app:layout_constraintGuide_begin="50dp"
-            android:id="@+id/topGuideline"/>
-    <android.support.constraint.Guideline
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" app:layout_constraintGuide_begin="163dp" android:id="@+id/buttonAreaGuideline"/>
 </android.support.constraint.ConstraintLayout>
