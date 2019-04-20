@@ -33,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/labelGuideline"
-            app:layout_constraintGuide_end="290dp" />
+            app:layout_constraintGuide_end="305dp"/>
 
     <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -97,13 +97,14 @@
             android:elevation="3dp" />
 
     <Spinner
-            android:layout_width="141dp"
+            android:layout_width="202dp"
             android:layout_height="47dp"
             android:id="@+id/sourceMetric"
             android:elevation="3dp"
             android:entries="@array/metrics"
             app:layout_constraintTop_toBottomOf="@+id/toolbar"
-            app:layout_constraintEnd_toStartOf="@id/rightGuideline" />
+            app:layout_constraintStart_toEndOf="@+id/quantity"
+            android:layout_marginTop="8dp"/>
 
     <View
             android:id="@+id/divider"
@@ -118,7 +119,7 @@
 
     <EditText
             android:layout_width="91dp"
-            android:layout_height="40dp"
+            android:layout_height="47dp"
             android:inputType="numberSigned"
             android:ems="10"
             android:id="@+id/quantity"
@@ -128,7 +129,7 @@
             android:background="@drawable/input_bordered"
             app:layout_constraintStart_toStartOf="@+id/labelGuideline"
             app:layout_constraintTop_toBottomOf="@+id/toolbar"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"/>
 
     <ScrollView
             android:layout_width="0dp"
