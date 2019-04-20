@@ -46,14 +46,14 @@
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintGuide_percent="0.23"
+            app:layout_constraintGuide_percent="0.28"
             android:id="@+id/buttonAreaGuideline"/>
 
     <android.support.constraint.Guideline
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintGuide_percent="0.30"
+            app:layout_constraintGuide_percent="0.35"
             android:id="@+id/bottomFormGuideline"/>
 
     <android.support.constraint.Guideline
@@ -66,15 +66,18 @@
 
     <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="0dp"
-            android:background="?attr/colorPrimary"
             android:elevation="2dp"
-            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:theme="?attr/actionBarTheme"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toTopOf="@id/topGuideline"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/topGuideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:navigationIcon="@mipmap/ic_launcher_foreground"
+            app:title="Calcubaker"
+            android:background="@color/colorPrimary"
+            app:titleTextColor="#FFFFFF"/>
 
     <TextView
             android:text="@string/convert"

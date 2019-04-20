@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity(), OnItemSelectedListener, TextWatcher, V
         Fabric.with(this, Crashlytics())
         Fabric.with(this, Answers())
         setContentView(R.layout.activity_main)
-        setSupportActionBar(findViewById(R.id.toolbar))
+
         sourceMetrics = findViewById(R.id.sourceMetric)
         products = findViewById(R.id.product)
         table = findViewById(R.id.resultsTable)
@@ -68,18 +68,6 @@ class MainActivity : AppCompatActivity(), OnItemSelectedListener, TextWatcher, V
         val adapter = ArrayAdapter(this, R.layout.spinner_item, viewmodel.getProducts().map { product -> product.name })
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         products.adapter = adapter
-    }
-
-    override fun setActionBar(toolbar: Toolbar?) {
-        val supportActionBar = supportActionBar
-        if (supportActionBar != null) {
-            supportActionBar.title = "Calcubaker"
-            supportActionBar.setLogo(R.mipmap.ic_launcher)
-            supportActionBar.setDisplayShowTitleEnabled(true)
-            supportActionBar.setDisplayUseLogoEnabled(true)
-            supportActionBar.setDisplayShowHomeEnabled(true)
-            supportActionBar.show()
-        };
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
