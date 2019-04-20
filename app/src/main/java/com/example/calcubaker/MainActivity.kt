@@ -58,13 +58,13 @@ class MainActivity : AppCompatActivity(), OnItemSelectedListener, TextWatcher, V
     }
 
     private fun loadMetrics() {
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, viewmodel.getMetrics().map { metric -> metric.name })
+        val adapter = ArrayAdapter(this, R.layout.spinner_item, viewmodel.getMetrics().map { metric -> metric.name })
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         sourceMetrics.adapter = adapter
     }
 
     private fun loadProducts() {
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, viewmodel.getProducts().map { product -> product.name })
+        val adapter = ArrayAdapter(this, R.layout.spinner_item, viewmodel.getProducts().map { product -> product.name })
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         products.adapter = adapter
     }
