@@ -11,7 +11,7 @@
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintGuide_percent="0.1"
+            app:layout_constraintGuide_percent="0.08"
             android:id="@+id/topGuideline"/>
 
     <android.support.constraint.Guideline
@@ -32,7 +32,7 @@
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintGuide_percent="0.15"
+            app:layout_constraintGuide_percent="0.18"
             android:id="@+id/secondRowGuideline"/>
 
     <android.support.constraint.Guideline
@@ -46,27 +46,35 @@
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintGuide_percent="0.2"
+            app:layout_constraintGuide_percent="0.23"
             android:id="@+id/buttonAreaGuideline"/>
 
     <android.support.constraint.Guideline
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintGuide_percent="0.3"
+            app:layout_constraintGuide_percent="0.30"
             android:id="@+id/bottomFormGuideline"/>
+
+    <android.support.constraint.Guideline
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pageBottomGuideline"
+            app:layout_constraintGuide_percent="1"/>
 
 
     <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="0dp"
             android:background="?attr/colorPrimary"
             android:elevation="2dp"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toTopOf="@id/topGuideline"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
             android:text="@string/convert"
@@ -122,7 +130,7 @@
 
     <Spinner
             android:layout_width="0dp"
-            android:layout_height="47dp"
+            android:layout_height="0dp"
             android:id="@+id/sourceMetric"
             android:elevation="3dp"
             android:entries="@array/metrics"
@@ -145,7 +153,7 @@
 
     <EditText
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:inputType="numberSigned"
             android:ems="10"
             android:id="@+id/quantity"
@@ -157,7 +165,8 @@
             app:layout_constraintTop_toBottomOf="@id/topGuideline"
             app:layout_constraintBottom_toTopOf="@id/secondRowGuideline"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintEnd_toStartOf="@+id/sourceMetric" app:layout_constraintHorizontal_weight="1"/>
+            app:layout_constraintEnd_toStartOf="@+id/sourceMetric" app:layout_constraintHorizontal_weight="1"
+            android:layout_marginTop="3dp"/>
 
     <ScrollView
             android:layout_width="0dp"
@@ -166,7 +175,7 @@
             android:layout_marginTop="5dp"
             app:layout_constraintStart_toStartOf="@id/leftGuideline"
             app:layout_constraintEnd_toStartOf="@id/rightGuideline"
-            app:layout_constraintBottom_toBottomOf="parent">
+            app:layout_constraintBottom_toBottomOf="@id/pageBottomGuideline">
 
         <TableLayout
                 android:layout_width="match_parent"
