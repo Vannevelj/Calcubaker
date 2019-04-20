@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity(), OnItemSelectedListener, TextWatcher, V
         sourceMetrics = findViewById(R.id.sourceMetric)
         products = findViewById(R.id.product)
         table = findViewById(R.id.resultsTable)
+        table.removeAllViews()
 
         sourceMetrics.onItemSelectedListener = this
         products.onItemSelectedListener = this
@@ -109,7 +110,7 @@ class MainActivity : AppCompatActivity(), OnItemSelectedListener, TextWatcher, V
     }
 
     private fun reset() {
-        table.visibility = View.GONE
+        table.visibility = View.INVISIBLE
     }
 
     private fun recalculate() {
