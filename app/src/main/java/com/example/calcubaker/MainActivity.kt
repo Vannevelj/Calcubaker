@@ -1,4 +1,4 @@
-package com.example.calcubaker
+package com.calcubaker.calcubaker
 
 import android.graphics.Color
 import android.graphics.Typeface
@@ -11,12 +11,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import android.widget.AdapterView.OnItemSelectedListener
-import com.example.calcubaker.repositories.ConversionRepository
-import com.example.calcubaker.repositories.MetricsRepository
-import com.example.calcubaker.repositories.ProductRepository
-import com.example.calcubaker.services.MetricsService
-import com.example.calcubaker.viewmodels.CalculationResult
-import com.example.calcubaker.viewmodels.CalculatorViewmodel
+import com.calcubaker.calcubaker.repositories.ConversionRepository
+import com.calcubaker.calcubaker.repositories.MetricsRepository
+import com.calcubaker.calcubaker.repositories.ProductRepository
+import com.calcubaker.calcubaker.services.MetricsService
+import com.calcubaker.calcubaker.viewmodels.CalculationResult
+import com.calcubaker.calcubaker.viewmodels.CalculatorViewmodel
 import java.lang.Double.parseDouble
 import com.crashlytics.android.Crashlytics
 import com.crashlytics.android.answers.Answers

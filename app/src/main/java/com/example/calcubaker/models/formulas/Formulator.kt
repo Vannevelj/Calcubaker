@@ -1,4 +1,4 @@
-package com.example.calcubaker.models.formulas
+package com.calcubaker.calcubaker.models.formulas
 
 class Formulator {
     companion object Invoke {

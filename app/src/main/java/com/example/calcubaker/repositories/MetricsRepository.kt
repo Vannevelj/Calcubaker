@@ -1,7 +1,7 @@
-package com.example.calcubaker.repositories
+package com.calcubaker.calcubaker.repositories
 
-import com.example.calcubaker.models.Metric
-import com.example.calcubaker.models.MetricUnit
+import com.calcubaker.calcubaker.models.Metric
+import com.calcubaker.calcubaker.models.MetricUnit
 
 class MetricsRepository {
     fun getMetrics() : List<Metric> {
@@ -9,8 +9,8 @@ class MetricsRepository {
             Metric(MetricUnit.Grams, "Grams (g)"),
             Metric(MetricUnit.Kilogram, "Kilogram (kg)"),
             
-            Metric(MetricUnit.Milliliter, "Milliliter (mL)"),
-            Metric(MetricUnit.Liter, "Liter (l)"),
+            Metric(MetricUnit.Milliliter, "Millilitre (mL)"),
+            Metric(MetricUnit.Liter, "Litre (l)"),
             
             Metric(MetricUnit.MetricCups, "Cups (Metric)"),
             Metric(MetricUnit.UsRecipeCups, "Cups (US recipes)"),
@@ -23,7 +23,7 @@ class MetricsRepository {
             Metric(MetricUnit.UsTablespoons, "Tablespoons (US)"),
             
             Metric(MetricUnit.Ounces, "Ounces (oz)"),
-            Metric(MetricUnit.UsFluidOunces, "Fluid ounces (fl. oz)"),
+            Metric(MetricUnit.UsFluidOunces, "Fluid Ounces (fl. oz)"),
             
             Metric(MetricUnit.Pounds, "Pounds (lbs)"),
             

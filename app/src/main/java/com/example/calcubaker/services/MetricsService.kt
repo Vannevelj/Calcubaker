@@ -1,9 +1,9 @@
-package com.example.calcubaker.services
+package com.calcubaker.calcubaker.services
 
-import com.example.calcubaker.models.*
-import com.example.calcubaker.repositories.ConversionRepository
-import com.example.calcubaker.repositories.MetricsRepository
-import com.example.calcubaker.repositories.ProductRepository
+import com.calcubaker.calcubaker.models.*
+import com.calcubaker.calcubaker.repositories.ConversionRepository
+import com.calcubaker.calcubaker.repositories.MetricsRepository
+import com.calcubaker.calcubaker.repositories.ProductRepository
 import no.wtw.android.dijkstra.DijkstraAlgorithm
 import no.wtw.android.dijkstra.model.Edge
 import no.wtw.android.dijkstra.model.Graph
@@ -15,7 +15,7 @@ class MetricsService(
     private val conversionRepository: ConversionRepository,
     private val productRepository: ProductRepository) {
 
-    fun getMetrics() : List<Metric> = metricsRepository.getMetrics().sortedBy { metric -> metric.name }
+    fun getMetrics() : List<Metric> = metricsRepository.getMetrics()
     fun getProducts() : List<Product> = productRepository.getProducts().sortedBy { product -> product.name }
     fun getMetric(metricUnit: MetricUnit) : Metric = metricsRepository.getMetrics().first { metric -> metric.id == metricUnit}
 

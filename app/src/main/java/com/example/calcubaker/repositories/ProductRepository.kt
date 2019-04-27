@@ -1,6 +1,6 @@
-package com.example.calcubaker.repositories
+package com.calcubaker.calcubaker.repositories
 
-import com.example.calcubaker.models.Product
+import com.calcubaker.calcubaker.models.Product
 
 class ProductRepository {
     fun getProducts() : List<Product> {
@@ -29,15 +29,15 @@ class ProductRepository {
             Product(25, "Milk (Whole)", 1.028),
             Product(27, "Cream (Light)", 1.018),
             Product(28, "Cream (Heavy)", 1.005),
-            Product(31, "Berries (Blueberry)", 0.625),
-            Product(32, "Berries (Strawberry)", 0.609),
-            Product(33, "Berries (Raspberry)", 0.520),
             Product(34, "Flour (Almond)", 1.09),
-            Product(36, "Hazelnut Meal", 0.488),
+            Product(36, "Flour (Hazelnut)", 0.488),
             Product(37, "Flour (Cake)", 0.423),
             Product(38, "Flour (Bread)", 0.537),
             Product(39, "Flour (Coconut)", 0.473),
-            Product(40, "Flour (Walnut)", 0.402)
+            Product(40, "Flour (Walnut)", 0.402),
+            Product(41, "Sugar (Caster)", 0.951),
+            Product(42, "Baking Powder", 0.933),
+            Product(43, "Baking Soda", 2.200)
         )
     }
 }

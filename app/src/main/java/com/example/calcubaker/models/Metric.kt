@@ -1,4 +1,4 @@
-package com.example.calcubaker.models
+package com.calcubaker.calcubaker.models
 
 data class Metric(val id: MetricUnit, val name: String) {
     override fun equals(other: Any?): Boolean {
