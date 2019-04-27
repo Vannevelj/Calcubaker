@@ -1,9 +1,9 @@
-package com.calcubaker.Calcubaker.services
+package com.calcubaker.calcubaker.services
 
-import com.calcubaker.Calcubaker.models.*
-import com.calcubaker.Calcubaker.repositories.ConversionRepository
-import com.calcubaker.Calcubaker.repositories.MetricsRepository
-import com.calcubaker.Calcubaker.repositories.ProductRepository
+import com.calcubaker.calcubaker.models.*
+import com.calcubaker.calcubaker.repositories.ConversionRepository
+import com.calcubaker.calcubaker.repositories.MetricsRepository
+import com.calcubaker.calcubaker.repositories.ProductRepository
 import no.wtw.android.dijkstra.DijkstraAlgorithm
 import no.wtw.android.dijkstra.model.Edge
 import no.wtw.android.dijkstra.model.Graph

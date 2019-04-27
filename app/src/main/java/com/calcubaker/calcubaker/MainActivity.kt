@@ -1,4 +1,4 @@
-package com.calcubaker.Calcubaker
+package com.calcubaker.calcubaker
 
 import android.graphics.Color
 import android.graphics.Typeface
@@ -11,20 +11,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import android.widget.AdapterView.OnItemSelectedListener
-import com.calcubaker.Calcubaker.repositories.ConversionRepository
-import com.calcubaker.Calcubaker.repositories.MetricsRepository
-import com.calcubaker.Calcubaker.repositories.ProductRepository
-import com.calcubaker.Calcubaker.services.MetricsService
-import com.calcubaker.Calcubaker.viewmodels.CalculationResult
-import com.calcubaker.Calcubaker.viewmodels.CalculatorViewmodel
+import com.calcubaker.calcubaker.repositories.ConversionRepository
+import com.calcubaker.calcubaker.repositories.MetricsRepository
+import com.calcubaker.calcubaker.repositories.ProductRepository
+import com.calcubaker.calcubaker.services.MetricsService
+import com.calcubaker.calcubaker.viewmodels.CalculationResult
+import com.calcubaker.calcubaker.viewmodels.CalculatorViewmodel
 import java.lang.Double.parseDouble
 import com.crashlytics.android.Crashlytics
 import com.crashlytics.android.answers.Answers
 import io.fabric.sdk.android.Fabric
 import android.app.Activity
 import android.view.inputmethod.InputMethodManager
-import com.calcubaker.Calcubaker.R
-
 
 class MainActivity : AppCompatActivity(), OnItemSelectedListener, TextWatcher, View.OnClickListener {
     private val viewmodel: CalculatorViewmodel = CalculatorViewmodel(
@@ -156,7 +154,7 @@ class MainActivity : AppCompatActivity(), OnItemSelectedListener, TextWatcher, V
     }
 
     // https://stackoverflow.com/a/17789187/1864167
-    fun hideKeyboard(activity: Activity) {
+    private fun hideKeyboard(activity: Activity) {
         val imm = activity.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
 
         //Find the currently focused view, so we can grab the correct window token from it.

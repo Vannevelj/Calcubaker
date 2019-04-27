@@ -1,10 +1,10 @@
-package com.calcubaker.Calcubaker.viewmodels
+package com.calcubaker.calcubaker.viewmodels
 
 import com.crashlytics.android.answers.Answers
 import com.crashlytics.android.answers.CustomEvent
-import com.calcubaker.Calcubaker.models.Metric
-import com.calcubaker.Calcubaker.models.Product
-import com.calcubaker.Calcubaker.services.MetricsService
+import com.calcubaker.calcubaker.models.Metric
+import com.calcubaker.calcubaker.models.Product
+import com.calcubaker.calcubaker.services.MetricsService
 
 class CalculatorViewmodel(private val metricsService: MetricsService) {
     var product: Product? = null

@@ -1,4 +1,4 @@
-package com.calcubaker.Calcubaker.models
+package com.calcubaker.calcubaker.models
 
 enum class MetricUnit(val id: Int) {
     None(0),

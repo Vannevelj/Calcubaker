@@ -1,6 +1,6 @@
-package com.calcubaker.Calcubaker.repositories
+package com.calcubaker.calcubaker.repositories
 
-import com.calcubaker.Calcubaker.models.Product
+import com.calcubaker.calcubaker.models.Product
 
 class ProductRepository {
     fun getProducts() : List<Product> {
