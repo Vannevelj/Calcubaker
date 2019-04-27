@@ -1,4 +1,4 @@
-package com.calcubaker.calcubaker
+package com.calcubaker.Calcubaker
 
 import android.graphics.Color
 import android.graphics.Typeface
@@ -11,19 +11,19 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import android.widget.AdapterView.OnItemSelectedListener
-import com.calcubaker.calcubaker.repositories.ConversionRepository
-import com.calcubaker.calcubaker.repositories.MetricsRepository
-import com.calcubaker.calcubaker.repositories.ProductRepository
-import com.calcubaker.calcubaker.services.MetricsService
-import com.calcubaker.calcubaker.viewmodels.CalculationResult
-import com.calcubaker.calcubaker.viewmodels.CalculatorViewmodel
+import com.calcubaker.Calcubaker.repositories.ConversionRepository
+import com.calcubaker.Calcubaker.repositories.MetricsRepository
+import com.calcubaker.Calcubaker.repositories.ProductRepository
+import com.calcubaker.Calcubaker.services.MetricsService
+import com.calcubaker.Calcubaker.viewmodels.CalculationResult
+import com.calcubaker.Calcubaker.viewmodels.CalculatorViewmodel
 import java.lang.Double.parseDouble
 import com.crashlytics.android.Crashlytics
 import com.crashlytics.android.answers.Answers
 import io.fabric.sdk.android.Fabric
 import android.app.Activity
 import android.view.inputmethod.InputMethodManager
-import com.calcubaker.calcubaker.R
+import com.calcubaker.Calcubaker.R
 
 
 class MainActivity : AppCompatActivity(), OnItemSelectedListener, TextWatcher, View.OnClickListener {

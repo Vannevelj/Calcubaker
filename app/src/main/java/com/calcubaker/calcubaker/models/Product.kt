@@ -1,4 +1,4 @@
-package com.calcubaker.calcubaker.models
+package com.calcubaker.Calcubaker.models
 
 /***
  * @param density expressed in g/cm3

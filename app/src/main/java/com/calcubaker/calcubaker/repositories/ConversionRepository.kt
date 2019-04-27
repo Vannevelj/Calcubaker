@@ -1,8 +1,8 @@
-package com.calcubaker.calcubaker.repositories
+package com.calcubaker.Calcubaker.repositories
 
-import com.calcubaker.calcubaker.models.Conversion
-import com.calcubaker.calcubaker.models.MetricUnit
-import com.calcubaker.calcubaker.models.formulas.Formulator
+import com.calcubaker.Calcubaker.models.Conversion
+import com.calcubaker.Calcubaker.models.MetricUnit
+import com.calcubaker.Calcubaker.models.formulas.Formulator
 
 class ConversionRepository {
     fun getConversions() : List<Conversion> {

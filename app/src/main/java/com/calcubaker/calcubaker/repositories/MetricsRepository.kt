@@ -1,7 +1,7 @@
-package com.calcubaker.calcubaker.repositories
+package com.calcubaker.Calcubaker.repositories
 
-import com.calcubaker.calcubaker.models.Metric
-import com.calcubaker.calcubaker.models.MetricUnit
+import com.calcubaker.Calcubaker.models.Metric
+import com.calcubaker.Calcubaker.models.MetricUnit
 
 class MetricsRepository {
     fun getMetrics() : List<Metric> {

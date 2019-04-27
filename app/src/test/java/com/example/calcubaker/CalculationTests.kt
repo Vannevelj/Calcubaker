@@ -1,11 +1,11 @@
-package com.calcubaker.calcubaker
+package com.calcubaker.Calcubaker
 
-import com.calcubaker.calcubaker.models.MetricUnit
-import com.calcubaker.calcubaker.models.Product
-import com.calcubaker.calcubaker.repositories.ConversionRepository
-import com.calcubaker.calcubaker.repositories.MetricsRepository
-import com.calcubaker.calcubaker.repositories.ProductRepository
-import com.calcubaker.calcubaker.services.MetricsService
+import com.calcubaker.Calcubaker.models.MetricUnit
+import com.calcubaker.Calcubaker.models.Product
+import com.calcubaker.Calcubaker.repositories.ConversionRepository
+import com.calcubaker.Calcubaker.repositories.MetricsRepository
+import com.calcubaker.Calcubaker.repositories.ProductRepository
+import com.calcubaker.Calcubaker.services.MetricsService
 import org.hamcrest.CoreMatchers.equalTo
 import org.junit.Test
 

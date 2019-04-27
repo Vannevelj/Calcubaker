@@ -1,6 +1,6 @@
-package com.calcubaker.calcubaker.viewmodels
+package com.calcubaker.Calcubaker.viewmodels
 
-import com.calcubaker.calcubaker.models.Metric
+import com.calcubaker.Calcubaker.models.Metric
 import java.text.DecimalFormat
 
 data class CalculationResult(val amount: Double, val metric:Metric) {
