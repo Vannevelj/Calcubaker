@@ -9,7 +9,7 @@ apply plugin: 'io.fabric'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.calcubaker.calcubaker"
+        applicationId "com.calcubaker.Calcubaker"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 4
