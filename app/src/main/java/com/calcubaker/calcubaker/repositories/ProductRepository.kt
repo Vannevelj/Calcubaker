@@ -29,7 +29,7 @@ class ProductRepository {
             Product(25, "Milk (Whole)", 1.028),
             Product(27, "Cream (Light)", 1.018),
             Product(28, "Cream (Heavy)", 1.005),
-            Product(34, "Flour (Almond)", 1.09),
+            Product(34, "Flour (Almond)", 0.529),
             Product(36, "Flour (Hazelnut)", 0.488),
             Product(37, "Flour (Cake)", 0.423),
             Product(38, "Flour (Bread)", 0.537),
