@@ -18,3 +18,15 @@ steps:
     publishJUnitResults: false
     testResultsFiles: '**/TEST-*.xml'
     tasks: 'assembleDebug'
+
+- task: DownloadSecureFile@1
+  inputs:
+    secureFile: 'calcubaker.jks'
+
+- task: AndroidSigning@3
+  inputs:
+    apkFiles: '**/*.apk'
+    apksignerKeystoreFile: 'calcubaker.jks'
+    apksignerKeystorePassword: '$(keystorePassword)'
+    apksignerKeystoreAlias: '$(keyAlias)'
+    apksignerKeyPassword: '$(keyPassword)'
