@@ -30,3 +30,4 @@ steps:
     apksignerKeystorePassword: '$(keystorePassword)'
     apksignerKeystoreAlias: '$(keyAlias)'
     apksignerKeyPassword: '$(keyPassword)'
+    zipalign: false
