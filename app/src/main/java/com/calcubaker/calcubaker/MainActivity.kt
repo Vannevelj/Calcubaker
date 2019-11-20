@@ -96,7 +96,12 @@ class MainActivity : AppCompatActivity(), OnItemSelectedListener, TextWatcher, V
         if (p0 == null || p0.isEmpty()) {
             viewmodel.amount = 0.0
         } else {
-            viewmodel.amount = parseDouble(p0.toString())
+            try {
+                viewmodel.amount = parseDouble(p0.toString())
+            }
+            catch (e: Exception) {
+                viewmodel.amount = 0.0
+            }
         }
     }
 
