@@ -48,7 +48,7 @@ class MetricsService(
         {
             end = parseInt((path[index].payload.toString()))
 
-            var conversion = conversions.first { conv -> conv.from.id == start && conv.to.id == end }
+            var conversion = conversions.first { conversion -> conversion.from.id == start && conversion.to.id == end }
             chainedConversions.add(conversion)
 
             index++;
