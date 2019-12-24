@@ -37,7 +37,10 @@ class ProductRepository {
             Product(40, "Flour (Walnut)", 0.402),
             Product(41, "Sugar (Caster)", 0.951),
             Product(42, "Baking Powder", 0.933),
-            Product(43, "Baking Soda", 2.200)
+            Product(43, "Baking Soda", 2.200),
+            Product(44, "Egg White", 1.031),
+            Product(45, "Egg Yolk", 1.025),
+            Product(46, "Egg", 1.040)
         )
     }
 }
